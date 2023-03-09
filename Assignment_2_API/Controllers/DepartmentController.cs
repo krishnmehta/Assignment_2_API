@@ -34,7 +34,7 @@ namespace Assignment_2_API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> EditDept(int id,Department department) // To Edit Department
+        public async Task<IActionResult> EditDept([FromRoute]int id,Department department) // To Edit Department
         {
             //Using more optimized FirstOrDefaultAsync Method
             if(id != department.Id)

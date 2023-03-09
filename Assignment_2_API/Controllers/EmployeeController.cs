@@ -51,7 +51,7 @@ namespace Assignment_2_API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> EditEmployee(int id,Employee employee) //To Edit the employee
+        public async Task<IActionResult> EditEmployee([FromRoute]int id,Employee employee) //To Edit the employee
         {
             if (id != employee.Id) // Checking if the given employee id exist or not
             {
